@@ -1,0 +1,16 @@
+html,body{
+    background-color: #ddedc4;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.main-box{
+    height: 60vh;
+    width: 30vw;
+    border: 1px solid red;
+}

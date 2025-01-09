@@ -8,9 +8,9 @@ html,body{
     align-items: center;
     font-size: 16px;
 }
-
+/* BOXES */
 .main-box{
-    height: 60vh;
+    height: 50vh;
     width: 36vw;
     display: flex;
     flex-direction: column;
@@ -36,12 +36,14 @@ html,body{
     padding: 3vh 0 3vh 0;
 
 }
-
+/* BUTTONS */
 .input{
     height:6vh ;
     width: 25vw;
     font-size: 3rem;
     text-align: right;
+    border: none;
+    border-radius: 5px;
 }
 
 .number-button{
@@ -55,6 +57,7 @@ html,body{
 
 .number-button:hover{
     background-color: #cca012;
+    transition: 0.2s;
 }
 
 .action-button{
@@ -64,12 +67,39 @@ html,body{
     border-radius: 15px;
     background-color:#f78c22 ;
 
+
 }
 
 .action-button:hover{
     background-color:#c76e15 ;
+    transition: 0.2s;
 }
+
+.clear-btn{
+    background-color:#f78c22;
+    width: 6vw;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    border: 4px solid white;
+
+}
+
+.clear-btn:hover{
+    background-color: white;
+    border-color:#f78c22 ;
+    color: #f78c22;
+    transition: 0.2s;
+}
+
 
 #equal{
     width: 18vw;
+}
+
+/* FOOTER */
+
+footer{
+    font-size: 2rem;
+    align-self: center;
+    color:black
 }

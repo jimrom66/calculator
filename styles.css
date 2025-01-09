@@ -1,5 +1,5 @@
 html,body{
-    background-color: #ddedc4;
+    background-color: #c4d6e3;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -11,6 +11,65 @@ html,body{
 
 .main-box{
     height: 60vh;
-    width: 30vw;
-    border: 1px solid red;
+    width: 36vw;
+    display: flex;
+    flex-direction: column;
+    background-color:#a3b3c8 ;
+    
+}
+
+.btn-box{
+    display: flex;
+    box-sizing:border-box;
+}
+
+
+.low-btn-box{
+    display: flex;
+    justify-content:right;
+}
+
+
+.input-clear-box{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 3vh 0 3vh 0;
+
+}
+
+.input{
+    height:6vh ;
+    width: 25vw;
+    font-size: 3rem;
+    text-align: right;
+}
+
+.number-button{
+    height: 6vh;
+    width: 9vw;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    background-color: #f9d55d;
+    
+}
+
+.number-button:hover{
+    background-color: #cca012;
+}
+
+.action-button{
+    height: 6vh;
+    width: 9vw;
+    font-size: 2rem;
+    border-radius: 15px;
+    background-color:#f78c22 ;
+
+}
+
+.action-button:hover{
+    background-color:#c76e15 ;
+}
+
+#equal{
+    width: 18vw;
 }

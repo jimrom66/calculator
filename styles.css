@@ -60,7 +60,7 @@ html,body{
     transition: 0.2s;
 }
 
-.action-button , .operate-button{
+.action-button , .operate-button, .backspace-button, .float-button{
     height: 6vh;
     width: 9vw;
     font-size: 2rem;
@@ -70,7 +70,7 @@ html,body{
 
 }
 
-.action-button:hover, .operate-button:hover{
+.action-button:hover, .operate-button:hover, .backspace-button:hover, .float-button:hover{
     background-color:#c76e15 ;
     transition: 0.2s;
 }

@@ -26,7 +26,7 @@ actionButtons.forEach(function(button) {
 });
 
 clearButton.addEventListener("click", function(){
-    input.value="";
+    input.value="0";
     firstNumber=0;
     operator=0;
     secondNumber=0;
@@ -47,6 +47,7 @@ backButton.addEventListener("click", function(){
 
 operateButton.addEventListener("click", function(){
     secondNumber=parseFloat(input.value.slice(1));
+    
     if (operator=="+"){
         result=addition(firstNumber,secondNumber);
     }
@@ -57,7 +58,8 @@ operateButton.addEventListener("click", function(){
         result=multiplication(firstNumber,secondNumber);
     }
     else if (operator=="/"){
-        result=divide(firstNumber.secondNumber);
+        result=divide(firstNumber,secondNumber);
+        console.log(result);
     }
     input.value=result;
     firstNumber=result;
@@ -74,7 +76,7 @@ operateButton.addEventListener("click", function(){
 const addition=(firstNumber, secondNumber)=>firstNumber+secondNumber;
 const substract=(firstNumber, secondNumber)=>firstNumber-secondNumber;
 const multiplication=(firstNumber, secondNumber)=>firstNumber*secondNumber;
-const divide = (firstNumber, secondNumber) => secondNumber !== 0 ? firstNumber / secondNumber : 'Error: Division by zero';
+const divide = (firstNumber, secondNumber) => secondNumber !== 0 ? firstNumber / secondNumber : 'noo diabeto';
 
 function disableButtons(typeOfButton){
     typeOfButton.forEach(button=>{

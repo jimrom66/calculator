@@ -5,14 +5,13 @@ const clearButton= document.querySelector(".clear-btn");
 const operateButton= document.querySelector(".operate-button");
 const backButton= document.querySelector(".backspace-button");
 const floatButton=document.querySelector(".float-button");
-const digits="1234567890";
 let firstNumber,operator,secondNumber,result;
 
 
 numberButtons.forEach(function(button) {
     button.addEventListener("click", function() {
         const buttonValue = this.getAttribute("value");  
-        if(input.value =="0"){
+        if(input.value =="0"|| (input.value=="noo diabeto")){
             input.value="";
         }
         input.value += buttonValue;  
@@ -71,7 +70,9 @@ backButton.addEventListener("click", function(){
 })
 
 operateButton.addEventListener("click", function(){
-    secondNumber=parseFloat(input.value.slice(1));
+    if (secondNumber === undefined || secondNumber==0) {
+        secondNumber = parseFloat(input.value.slice(1)); // Assuming input starts with a sign (e.g., + or -)
+    }
     
     if (operator=="+"){
         result=addition(firstNumber,secondNumber);
@@ -84,10 +85,11 @@ operateButton.addEventListener("click", function(){
     }
     else if (operator=="/"){
         result=divide(firstNumber,secondNumber);
-        console.log(result);
+        
     }
     input.value=result;
     firstNumber=result;
+    console.log(secondNumber);
     enableButtons(actionButtons)
 
 

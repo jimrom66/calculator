@@ -71,7 +71,7 @@ backButton.addEventListener("click", function(){
 
 operateButton.addEventListener("click", function(){
     if (secondNumber === undefined || secondNumber==0) {
-        secondNumber = parseFloat(input.value.slice(1)); // Assuming input starts with a sign (e.g., + or -)
+        secondNumber = parseFloat(input.value.slice(1)); 
     }
     
     if (operator=="+"){
@@ -89,7 +89,6 @@ operateButton.addEventListener("click", function(){
     }
     input.value=result;
     firstNumber=result;
-    console.log(secondNumber);
     enableButtons(actionButtons)
 
 

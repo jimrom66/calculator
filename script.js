@@ -5,6 +5,7 @@ const clearButton= document.querySelector(".clear-btn");
 const operateButton= document.querySelector(".operate-button");
 const backButton= document.querySelector(".backspace-button");
 const floatButton=document.querySelector(".float-button");
+const digits="1234567890";
 let firstNumber,operator,secondNumber,result;
 
 
@@ -38,13 +39,28 @@ clearButton.addEventListener("click", function(){
     floatButton.disabled=false;
 })
 
-floatButton.addEventListener("click",function(){
-    const buttonValue= this.getAttribute("value");
-    if(!input.value.includes(".")){
-        input.value += buttonValue;
+floatButton.addEventListener("click", function() {
+    const buttonValue = this.getAttribute("value");
+
+    // Check if there's no digit in the input
+    let containsDigit = false;
+    for (let i = 0; i < input.value.length; i++) {
+        if (input.value[i] >= '0' && input.value[i] <= '9') {
+            containsDigit = true;
+            break;
+        }
     }
-        
-})
+
+    // If no digit is found, set the input to '0'
+    if (!containsDigit) {
+        input.value += '0';
+    }
+
+    // If the input doesn't already contain a dot, append the dot
+    if (!input.value.includes(".")) {
+        input.value += buttonValue;  // Append the dot to the input value
+    }
+});
 
 backButton.addEventListener("click", function(){
     input.value=input.value.slice(0,-1);

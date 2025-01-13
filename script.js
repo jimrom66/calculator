@@ -11,6 +11,9 @@ let firstNumber,operator,secondNumber,result;
 numberButtons.forEach(function(button) {
     button.addEventListener("click", function() {
         const buttonValue = this.getAttribute("value");  
+        if(input.value =="0"){
+            input.value="";
+        }
         input.value += buttonValue;  
     });
 });
@@ -37,12 +40,18 @@ clearButton.addEventListener("click", function(){
 
 floatButton.addEventListener("click",function(){
     const buttonValue= this.getAttribute("value");
-    input.value += buttonValue;
-    floatButton.disabled=true;
+    if(!input.value.includes(".")){
+        input.value += buttonValue;
+    }
+        
 })
 
 backButton.addEventListener("click", function(){
     input.value=input.value.slice(0,-1);
+    if (input.value==""){
+        input.value+= "0";
+    }
+
 })
 
 operateButton.addEventListener("click", function(){

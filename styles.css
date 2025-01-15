@@ -21,6 +21,7 @@ html,body{
 .btn-box{
     display: flex;
     box-sizing:border-box;
+    
 }
 
 
@@ -103,3 +104,11 @@ footer{
     align-self: center;
     color:black
 }
+
+@media  screen and (max-width:500px) {
+    .main-box{
+        height: 70vh;
+        width:72vw;
+        justify-content:center;
+    }
+   }

@@ -24,9 +24,12 @@ actionButtons.forEach(function(button) {
         firstNumber= parseFloat(input.value);
         input.value=buttonValue;  
         operator=buttonValue;
+        secondNumber=0
         disableButtons(actionButtons);
     });
 });
+        
+    
 
 clearButton.addEventListener("click", function(){
     input.value="0";
@@ -70,8 +73,9 @@ backButton.addEventListener("click", function(){
 })
 
 operateButton.addEventListener("click", function(){
-    if (secondNumber === undefined || secondNumber==0) {
-        secondNumber = parseFloat(input.value.slice(1)); 
+    if (secondNumber==undefined || secondNumber==0){
+    secondNumber = parseFloat(input.value.slice(1)); 
+    console.log(secondNumber);
     }
     
     if (operator=="+"){

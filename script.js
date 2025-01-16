@@ -15,6 +15,7 @@ numberButtons.forEach(function(button) {
             input.value="";
         }
         input.value += buttonValue;  
+        adjustFontSize();
     });
 });
 
@@ -118,4 +119,14 @@ function enableButtons(typeOfButton){
     typeOfButton.forEach(button => {
         button.disabled=false;
     })
+}
+
+function adjustFontSize(){
+    if (input.value.length > 10){
+        input.style.fontSize = 1 + "rem";
+    }else if (input.value.length > 7){
+        input.style.fontSize = 2 + "rem";
+    }
+    else{ input.style.fontSize = 3 + "rem";
+    }
 }

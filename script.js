@@ -122,6 +122,9 @@ function enableButtons(typeOfButton){
 }
 
 function adjustFontSize(){
+    if (!isMobile()) return;
+        
+    
     if (input.value.length > 10){
         input.style.fontSize = 1 + "rem";
     }else if (input.value.length > 7){
@@ -129,4 +132,8 @@ function adjustFontSize(){
     }
     else{ input.style.fontSize = 3 + "rem";
     }
+}
+
+function isMobile() {
+    return window.innerWidth <= 500;
 }

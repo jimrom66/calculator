@@ -76,7 +76,7 @@ backButton.addEventListener("click", function(){
 operateButton.addEventListener("click", function(){
     if (secondNumber==undefined || secondNumber==0){
     secondNumber = parseFloat(input.value.slice(1)); 
-    console.log(secondNumber);
+    
     }
     
     if (operator=="+"){
